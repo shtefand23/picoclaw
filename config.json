@@ -1,0 +1,34 @@
+{
+  "agents": {
+    "defaults": {
+      "model": "minimax/MiniMax-M2.5:free"
+    }
+  },
+  "model_list": [
+    {
+      "model_name": "minimax/MiniMax-M2.5:free",
+      "model": "minimax/minimax-m2.5:free",
+      "api_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnYiOiJwcm9kdWN0aW9uIiwia2lsb1VzZXJJZCI6ImRjN2NmMThjLWEzZWUtNGY5MC1iM2QyLTdlY2RiNDNhY2U4NCIsImFwaVRva2VuUGVwcGVyIjpudWxsLCJ2ZXJzaW9uIjozLCJpYXQiOjE3NzE5MjI1ODEsImV4cCI6MTkyOTYwMjU4MX0.i913DJfpjbOwa1suVvBdEXoWmOMteGKjEN6z1wcrQng",
+      "api_base": "https://api.kilo.ai/api/gateway"
+    }
+  ],
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "token": "8641757569:AAGh7bpjeiqvpZZK6tJ_oV2aL8QemE2iXKE",
+      "allow_from": ["7895881350"]
+    }
+  },
+  "tools": {
+    "web": {
+      "duckduckgo": {
+        "enabled": true,
+        "max_results": 5
+      }
+    }
+  },
+  "heartbeat": {
+    "enabled": true,
+    "interval": 30
+  }
+}
