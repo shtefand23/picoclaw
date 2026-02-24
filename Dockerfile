@@ -33,8 +33,6 @@ COPY --from=builder /src/build/picoclaw /usr/local/bin/picoclaw
 RUN addgroup -g 1000 picoclaw && \
     adduser -D -u 1000 -G picoclaw picoclaw
 
-COPY config/config.json /home/picoclaw/.picoclaw/config.json
-
 # Switch to non-root user
 USER picoclaw
 
