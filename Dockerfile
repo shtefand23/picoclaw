@@ -39,5 +39,7 @@ USER picoclaw
 # Run onboard to create initial directories and config
 RUN /usr/local/bin/picoclaw onboard
 
+COPY config/config.json /home/picoclaw/.picoclaw/config.json
+
 ENTRYPOINT ["picoclaw"]
 CMD ["gateway"]
