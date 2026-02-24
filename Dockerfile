@@ -33,13 +33,13 @@ COPY --from=builder /src/build/picoclaw /usr/local/bin/picoclaw
 RUN addgroup -g 1000 picoclaw && \
     adduser -D -u 1000 -G picoclaw picoclaw
 
+COPY config/config.json /home/picoclaw/.picoclaw/config.json
+
 # Switch to non-root user
 USER picoclaw
 
 # Run onboard to create initial directories and config
 RUN /usr/local/bin/picoclaw onboard
-
-COPY config/config.json /home/picoclaw/.picoclaw/config.json
 
 ENTRYPOINT ["picoclaw"]
 CMD ["gateway"]
